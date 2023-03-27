@@ -60,7 +60,7 @@ function renderMarkupOneCountry(data) {
 function renderMarkupCountryAll(data) {
   const countryAll = data.map(
     ({ name, capital, population, flags, languages }) =>
-      `
+      `<div class=country-info__container>
       <img
         src="${flags.svg}"
         alt="${name.official}"
@@ -69,7 +69,7 @@ function renderMarkupCountryAll(data) {
       <h1 class="country-info__title">${name.official}</h1>
         <p>Capital: ${capital}</p>
         <p>Population: ${population}</p>
-        <p>Languages: ${Object.values(languages)}</p>
+        <p>Languages: ${Object.values(languages)}</p></div>
       `
   );
 
